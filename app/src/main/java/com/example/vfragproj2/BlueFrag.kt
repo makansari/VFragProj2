@@ -17,11 +17,17 @@ class BlueFrag  : Fragment(){
         var v = inflater.inflate(R.layout.blue_frag,container,false)
 
         v.buttonBluePassdata.setOnClickListener {
-            var redFrag = RedFrag()
+           /* var redFrag = RedFrag()
             var b = Bundle()
             b.putString("key1","Welcome to RedFrag")
             redFrag.arguments = b
-            fragmentManager?.beginTransaction()?.replace(R.id.myMainActLayout,redFrag)?.commit()
+            fragmentManager?.beginTransaction()?.replace(R.id.myMainActLayout,redFrag)?.commit()*/
+
+            var myInterface : MyInterface = activity as MyInterface
+            myInterface.myMethod("Hello Guys")
+
+
+
         }
         return v
     }

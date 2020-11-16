@@ -16,8 +16,13 @@ class RedFrag : Fragment() {
     ): View? {
 
         var v = inflater.inflate(R.layout.red_frag,container,false)
-           var data =  arguments?.getString("key1")
-        v.textViewRedResult.setText(data)
+      /*     var data =  arguments?.getString("key1")
+        v.textViewRedResult.setText(data)*/
         return v
+    }
+
+    fun myResult(result : String){
+        textViewRedResult.setText(result)
+
     }
 }
